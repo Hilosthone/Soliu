@@ -1,0 +1,558 @@
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <title>Full CSS Course</title>
+        <style type="text/css">
+            body{
+        	  text-align: center;
+        	  font-family: lobster;
+        	  font-size: larger;
+        	  position: relative;
+			  border: groove 1em rgb(7, 74, 175);
+			  border-radius:  10em;
+			  margin: auto;
+        	}
+        </style>
+    </head>
+<body>
+<h2>Tutorials From Hilosthone Academy !!!</h2>
+<h1> CSS Learning</h1>
+<h2> Introduction to CSS </h2>
+<h3> What is CSS ? </h3>
+<p> CSS is a language that decides how your HTML should look. <br>
+CSS stands for <b> Cascading Style Sheets.</b> <br>
+Let's see what CSS can do for us. </p> <br>
+<p>1) Add colors to the webpage. <br>
+2) Providing webpage a rich and attractive look.<br>
+3) Change shapes, giveborders to your HTML Elements. <br>
+4) Position your elements as you want - change the layout.<br>
+<br>
+So, basically CSS does all that to the HTML that filters do to your Instagram pictures.</p>
+<br>
+<h3> Syntax </h3>
+<p>CSS Syntax consists of Selectors and Declarations.  <b>Selectors</b> are simply used to sellect the HTML element to be styled.<br>
+<b>Declaration</b> consists of a set of instrictions which tell the browser how to style the selected HTML element. <br>
+Selectors tell "where to do" and declarations tell the browser "what to do". It's like:<br>
+1) Choosing a paper - <b>Selection</b><br>
+2) Cutting it into half - <b>Manipulation</b> which comes from the 'Declaration'.<br><br>
+<u><i><b> p { font - size : 24 px ; }</u></i></b><br><br>
+In the above example, <b>p</b> is a <b>Selector</b> and the rest forms the <b>Declaration</b> block.<br>
+Declarations are properties and values followed by semicolons and enclosed within curly brackets.<br>
+So, by this we are selecting all the paragraph elements present in our webpaage and changing their font size to 24px. (px stands for <u>pixels</u>)<br>
+Let's see an example: <br><br>
+<i><b>p</b>{<br>
+<b>color</b>:red;<br>
+}</i><br><br>
+This code will change the color of all the paragraph elements to Red.</p>
+<br>
+<h2>How to add CSS</h2><h3>How to add CSS to your HTML?</h3>There are 3 ways to apply CSS to your HTML elements:<br>
+1) Write your CSS within the HTML tags - <b>Inline CSS</b><br>
+2) Write it inside your HTML file enclosed within the <<b>style</b>><<b>/style</b>> tag - <b>Internal CSS</b><br>
+3) Write it in a separate file with a <b>.css</b> extension and include it in HTML using the <<b>link</b>> tag - <b>External CSS</b><br>
+<h3>Inline CSS</h3>
+Writing CSS inside the HTML tags using a style <b>attribute</b> is known as <b>Inline CSS</b>.<br><br>
+<p style="font-size: 24px; color: red;">
+For writing inline CSS, we write without the spaces < p style = "font-size: 24px; color: red;"><br>You write the text here<br>< / p></p><br><br>
+It will change the color of the text inside the paragraph to red and font-size to 24px.<br>
+<h3>Internal CSS</h3>
+When you write CSS enclosed in the < style> tag within the < head> tag in your HTML file, it is known as <b>Internal CSS</b>.<br><br>
+< head><br>
+     < style><br>
+	 p{<br>
+	    color: orange;<br>
+		font-size: 24px;<br>
+	}<br>
+</ style><br>
+</ head><br>
+<h3>External CSS</h3>
+Storing your things in different compartiments is always a judicious waay of managing.<br>
+When you write CSS in a separate file and include the file in the HTML using the < link> tag, it is known as <b>External CSS</b>.<br><br>
+< head><br>
+< link rel="stylesheet" type="text/css" href="style.css"><br>
+</ head><br>
+<br>
+"rel" attribute specifies the relationship that the linked file has with the source file.<br>
+"type" attribute specifies the internet media <b>type</b> and the value "text/css" conveys that it is in CSS.<br>
+"href" or hypertext reference is used to provide the path of the file which we want to link.<br><br>
+//style.css<br>
+	p{<br>
+	font-size: 24px; <br>
+	color: green<br>
+	}<br><br>
+The styles written inside <b>.css</b> file are not enclosed within any tags.<br>
+Writting CSS externally is recommended aas it is easy to manage as well as it can be used at multiple places easily.<br>
+<h2>Selecting HTML elements</h2>
+An HTML element can be selected using:<br>
+1)<b>Element Selector</b><br>
+2)<b>Class Selector</b><br>
+3)<b>id selector</b><br>
+4)<b>Attribute Selector</b><br>
+<h3>Elemment Selector</h3>
+< p>Here is some text written inside the paragraph tag.</ p><br>
+<br>
+To simply select the above text, we can usse element selector which is nothing butt using the element name.<br>
+So, in order to select the above text and modify its style, we can write:<br>
+<br>
+<i><b>p{ <br>
+        /*property value pairs*/<br>
+		}</i></b><br><br>
+The above snippet will select aall the paragraph elements present on the webpage.<br>
+<u><b>Note:</u></b> /* */ is used to enclose comments in CSS. The things written inside /* and */ is ignored by the browsers.<br>
+<h3>Class Selector</h3>
+< p class="select-me"> Here is a paragraph tag which also has a claass specified inside it.</ p><br><br>
+If an HTML element has class associated with it, then it can be referened using class selectors in CSS.<br>
+Writing a class selector involves writing .(dot) followed by class name.<br>
+<br>
+<i><b>.select-me{<br>
+/*property value pairs*/<br>
+}</i></b><br><br>
+the above snippet will selectt all the elements containing the <b>	select-me</b> class.<br>
+<h3>Id Selector</h3>
+<p id="select-me"><br>
+Here is a paragraph tag which also has an id specified inside it.
+</p><br><br>
+< p id="select-me"><br>
+Here is a paragraph tag which also has an id specified inside it.</ p><br>
+<br>
+If an HTML element has an id associated with it, then it can be referenced using id selector in CSS.<br>
+Writing a class selector involves writing # (hash) followed by the id name.<br>
+<br>
+#select-me{<br>
+/*property value pairs*/<br>
+}<br><br>
+The above snippet will select the element containing <b>select-me</b> id.<br>
+<h3>Attribute Selector</h3>
+<input type="text" /><br>
+< input type="text"/><br>
+<br>
+Given above is an input tag containing <b>type</b> attribute with value text.<br>
+If an HTML element has an attribute associated with it, then it can be referenced using attribute selector in CSS.<br>
+Writing an <b>attribute</b> selector involves writing <b>element name</b> followe by [<b>attribute</b> = <b>value</b> as shown below<br><br>
+input[type=text]{<br>
+/*property value pairs*/<br>
+}<br><br>
+The above snippet will select all the input elements containing the <b>type</b> attribute with value text.<br>
+<h2>Playing with colors</h2>
+Colors in CsS can be specified in following ways:<br>
+1) Directly write the name of colors.<br>
+2) Using hex values of colors.<br>
+3) Using RGB/RGBA values.<br>
+<h3>Using Color Names</h3>
+Color in CSS can be specified by simply using a color name.<br>
+The total number of color names supported is 140.<br>
+Black, Blue, Red, Green, Gray, Aqua, Brown, Coral, Inigo are few to name.
+<h3>Hex values</h3>
+Another way of specifying colors in CSS is by using hexadecimals values.<br>
+Hexadecimal values are written in following format <b>#rrggbb</b> where rr, gg and bb are values between 00 and ff.<br>
+<b>rr</b> - the amountt of red<br>
+<b>gg</b> - the amount of green<br>
+<b>bb</b> - the amount of blue<br>
+00 is the lowwest value and ff the highest.<br><br>
+#000000 forms black color, whereas #FFFFFF forms white.<br>
+<h3>RGB/RGBA Value</h3>
+A color can also be sspecified using an RGB or RGBA value.<br>
+R- Red, G- green, B- blue and A- Alpha.<br>
+Alpha is a number between 0.0(fully transparent) and 1.0(fully opaque).<br>
+0 depicting the lowest intensity and 255 the highest.<br>
+For writing color in RGB format follow the syntax: <br><br>
+rgb(R, G, B) where R, G and B can be any values between 0 and 255.<br>
+If there is a need to specify opacity:<br>
+rgba(R, G, B, A) is used and for A values between 0.0 - 1.0 can be specified.<br>
+rgb(0,0,0) will form a black color and rgb(255,255,255) white.<br>
+<h2>Manipulating background</h2>
+<h3> Manipulating background of your web-page</h3>
+Like the background of a room enhance the look and feel of it, similary<br>
+Changing that white background becomes a necessity when it comes to building for the web.<br>
+Either you can set the background color or add an image as background.<br>
+<h3>Background color</h3>
+The property used to modify background color is <u><b>background-color</u></b> or <b><u>background</b></u> and values can be specified in any format from the ones we learnt.<br><br>
+body{<br>
+background-color:red;<br>
+}<br><br>
+or <br><br>
+body{<br>
+background-color: #FF0000;<br>
+}<br><br>
+or<br><br>
+body{<br>
+background-color:rgb(255,0,0);<br>
+}<br><br>
+will change tthe background color of the page to red.<br>
+*Simply <b>background</b> can also be used instead of <b>background-color</b>.<br>
+<h3>Background image</h3>
+It is as easy as learning abc.
+<b>background</b> or <b>background-image</b> property is use to specify <b>background image</b>.<br><br>
+background:url("path to image");<br>
+<br>
+Value consists of the url followed by the path to image in brackets.<br>
+This path can be replaced by some url of image on the web or by the path of image present in your local machine.<br><br>
+body{<br>
+background:url("https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pineisland_oli_2017349_Irg.jpg");<br>
+}<br><br>
+Will set an image as background.<br>
+<h3>Customize background image</h3>
+<b><u>background-size</b></u> property enables us to set/change the <b>size</b> of <b>background</b> image in CSS.It can take values of height followed by width, or contain or cover.<br>
+<b>contain</b> makes sure that the height and width of background image are in accordance with the height and width of content.<br>
+And images fits inside the content area.<br>
+<b>cover</b> makes sur that the height and width of the image spans the entire wwidth of the entire width and height of the available area.<br>
+valid <b>background-size</b> values as follows:<br>
+background-size: 100%;<br>
+background-size: cover;<br>
+background-size: contain;<br>
+*height and width can be specified in multiple ways which we will be learning ahead.<br>
+<br>
+<b>Background-repeat</b> property enables us to control if the image will be repeated to fill the content area or not.<br>
+it can take either of <b>repeat</b> or <b>no-repeat</b> as values. Reapeat specifies that the image is allowed to be repeated to fill the content area and <b>no-repeat</b>specifies it is not.<br>
+<br>
+backgroud-repeat: no-repeat;<br>
+background-repeat: repeat;<br>
+<br>
+Both of these are valid declarations. 
+<h2>Beautifiying text using CSS</h2>
+<h3>Beautifiying text using CSS</h3>
+Font-size, color, font-size, formatting of text is inevitable wether you are writing a novel or creating a web application.<br>
+HTML cannot do these things alone.<br>
+That's why CSS comes to rescue.<br>
+Let's see how to modify properties of text.<br>
+<h3>Changing color</h3>
+The text, when in contrast with the background, enhances the user readability.<br>
+To change the <b>color</b> of text in CSS <b>color</b> property is used followed by value or name of color.<br><br>
+< p>Hey! MMake me blue</ p><br>
+//style.css<br>
+p{<br>
+color:blue;<br>
+} <br><br>
+The above CSS will change color of text inside every paragraph tag to blue.<br>
+<h3>Changing Alignement</h3>
+Justified, center, right or left? How?<br>
+< p>Hey! I am here.</ p><br>
+//style.css<br>
+p{<br>
+text-align:center;<br>
+}<br><br>
+The property used is <b>text-align</b> and values can be anyone of <b>centre, left, right and justify</b><br>
+The above CSS will make the text inside paragraph tag center aligned.<br>
+<h3>Changing Font size</h3>
+The size of tthe text plays a crucial role in writing, for prioritizing and emphasizing.<br>
+Font-size in CSS can be changed using <b>font-size</b> property.<br>
+The value of font-size can be either set using pixels(px) or em.<br>
+<b>1em = 16px;</b><br>
+<br>
+< p>Hey! Please increase my font-size.</ p><br>
+//style.css<br>\p{<br>
+font-size:32px; /*can be specified using em as 2em*/<br>
+}<br><br>
+Tthe above snipet will increase font size of text to 32px. 
+<h3>Changing Font weight</h3>
+Font weight is used to change the wieght (boldness) of the font.<br>
+The fontt-weight property is used to modify font-weight.<br>
+Values can be normal, bold, bolder, lighter or any value from 100, 200, 300, 400, 500, 600, 700, 800 or 900.<br>
+100 being the lightest and 900 being the boldest.<br><br>
+< p>Hey! Please change my font-weight.</p><br>
+//style.css<br>
+p{<br>
+font-weight:400; /*can be anything from above values*/<br>
+}<br><br>
+The command given above will change the font-weightt of the text to 400.<br>
+<h3>Changing Font family</h3>
+The font family or font can be changed using font-family property.<br><br>
+< p>Hey! Please change my font-family.</ p><br>
+//style.css<br>
+p{<br>
+font-family:'Roberto', sans-serif;<br>
+}<br><br>
+The command given above will change thye font-family to Roberto.<br>
+If the roberto font is not found then sans-serif fontt is applied. It uses a fallback system.<br>
+<h2>Height width margin and more</h2>
+<h3>Introduction</h3>
+CSS gives freedom to modify height, width, margin, apply border aand padding to elements.<br>
+These properties come handy while making any web application visually appealing.<br>
+Let's explore how we can use these properties.<br>
+<h3>Height and Width</h3>
+To change the height and width of any element <b>height</b> property is used.<br>
+Similary, to change width, width propertty is used.<br>
+Height and width can take values in pixels(px) and percentage(%)<br>
+Let's see how it's done.<br><br>
+< img src="img.png"<br>
+class="paanda">Wow</ div><br>
+//style.css<br>
+.panda{<br>
+height:400px;<br>
+width:400px;<br>
+}<br>
+<br>
+the above CSS will change the height and width of div to 400px.<br><br>
+.panda{<br>
+height:50%;<br>
+width:100%;<br>
+}<br>
+<br>
+This will change the height to 50% of the available container height and width to 100% of the available container width.<br>
+<h3>Border</h3>
+Things look better with borders!<br>
+To give border to any element we can use <b>border-width, bordder-style</b> and <b>border-color</b> properties.<br>
+<b>border-width</b> can take any value in <b>pixels, border-style</b> provides variationss like <b>dashed, solid, dotted</b> and <b>border-color</b> can take any <b>valid color</b> value.<br>
+< div class="rocket">The box has margin around it.</ div><br>
+//style.css<br>
+.rocket{<br>
+border-width:2px;<br>
+border-style:solid;<br>
+border-color:black;<br>
+}<br><br>
+The above snippet CSS will apply a solid border to div with width 2px and black color.<br>
+There is also a shorthand property to apply border which goes like:<br><br>
+.rocket{<br>
+border:2px solid black;<br>
+}<br><br>
+Where 2px is the <b>border-width</b> olid is the <b>border-style</b> and the <b>border-color</b> is black.<br>
+If we need curved edges, then <b>border-radius</b> property can be used.<br><br>
+.rocket{<br>
+border:2px solid black;<br>
+border-radius:20px;<br>
+}<br>
+<br>
+Making its value 50% will transform it to a <b>circle</b>.
+<h3>Margin</h3>
+We create margins to separate the main content from tthe page's edge.<br>
+For a webpage, Margin is used to create space around elements outside the border.<br>
+We use margin-top, margin-right, margin-bottom and margin-left properties which in turn applies margin to top, right, bottom and left sides respectively.<br><br>
+< div class="staandard">Starlord, who?</ div><br>
+.starlord{<br>
+margin-top: 20px:<br>
+margin-right:30px:<br>
+margin-bottom:20px;<br>
+margin-left:30px;<br>
+}<br>
+<br>
+he above command will change the default margin around div to 20px from the top, 30px from the rightt, 20px from the bottom  and 30px from the left.<br>
+There is a shorthand property for margin:<br><br>
+.starlord{<br>
+margin:20px 30px 20px 30px; /*In order top, right, bottom, left*/<br>
+}<br>
+Also we can write:<br><br>
+.starlord{<br>
+margin:20px 30px;<br>
+}<br>
+These values will repeat themselves for bottom an left and will end up giving the same result as the above.<br>
+Also:<br>
+.starlord<br>
+margin:20px;<br>
+}<br>
+will create a margin of 20px around all sides.
+<h3>Padding</h3>
+padding is used to create space around elements, inside the border.<br>
+We use <b>padding-top, padding-right, padding-bottom</b> and <b>padding-left</b> properties which in tturn applies padding to top, right, bottom and left sides respectively.<br>
+<br>
+< div class="starlord">Starlord,who?</ div><br>
+.starlord{<br>
+padding-top:20px;<br>
+padding-right:30px;<br>
+padding-bottom:20px;<br>
+padding-left:30px;<br>
+}<br>
+And also we do the same process of margin to padding for shorthand property.<br>
+<h2>Positionning your HTML element</h2>
+<h3>Introduction</h3>
+Better positionning of objects in a room gives it a need and a managed look.<br>
+Similary, Positionning of elements is an integral part of building for web.<br>
+The property used to change position of element is <b>position</b>.<br>
+<h3>Static position</h3>
+For a room, the default position of a flower vase would be somewhere on the table, near tthe windows.<br>
+By <b>default</b> the position of all HTML elements iss set to static.<br>
+You can taake the back seat, nothimg to do here.<br> <br>
+< div class="static-me">I am not special. </ div><br>
+.static-me{<br>
+position:static<br>
+}<br><br>
+This is how you must give static position to elements, if ever required.
+<h3>Relative Position</h3>
+The rug we place in tthe room is near the door/bed/bathroom... So we keep changing its possition relative to our need.<br>
+Relative positioning enables us to position the elementt <b>relative to itself</b>
+That is, the element will change possition relative to its default position.<br><br>
+< div class="relative-me">What does this even mean? Look ip.</ div><br>
+.relative-me<br>
+position:relative;<br>
+top:10px;<br>
+}<br><br>
+This will move the div 10px towards bottom from where it would have been by default.<br>
+*top,left,right,bottom are usedd with position to specify distance from respective axes.
+<h3>Fixed position</h3>
+We tend to fix the position of a painting in a room (till the time we get another one).<br>
+Fixed positionning enables us to position the elementt <bb>relative to tthe screen</b><br>
+If an element is given a fixed position it will occupy that position on the screen.<br><br>
+< div class="fixed-me"I get attached soon.</ div><br>
+.fixed-me{<br>
+position:fixed;<br>
+top:50px;<br>
+left:50px;<br>
+}<br><br>
+This will move the div 50px towards bottom and 50px towards right from its original position and will keep it fixed there.<br>
+Fixed elements stay at the same place onj screen even if used scrolls.<br>
+<h3>Absolute position</h3>
+absolute positioning enables u to position tthe element <b>exactly where we want it</b>.<br>
+We can use <b>top,right,bottom,left</b> properties to place it wherever we want.<br><br>
+< div class="absolute-me">I am the best thing you have in store.</ div><br>
+.absolute-me{<br>
+position:absolute;<br>
+top:50px;<br>
+left:50px;<br>
+}<br><br>
+This will place the div 50px towards bottom and 50px towards right from its original position.
+<h2>Manipulating display properties</h3>
+Remember, the excitement we get while playing tetris to change the default shape of objects, just to win the game.<br>
+<b>Display</b> property in CSS is used tto control the default rendering behavior of an element.<br>
+Different elements have different default rendering behaviour.<br>
+<u>For example:</u>< p> and < div> are block level elements whereas < a> and < span> are inline elements.<br>
+Puzzled? Let's explore the display aand inline values of display property.
+<h3>Display block</h3>
+An element which has display property set to block is displayed on a new line and spans across the whole width.<br>
+To change the display behaviour of elements <b>display</b> property is used.<br>
+And to make an element display as block, display property is set to value block.<br><br>
+< span cclass="block-me">I need space.</ span><br>
+//style.css<br>
+.block-me{<br>
+display:block<br>
+}<br><br>
+The above snippet will change the display behaviour of < span> to block.<br>
+*< span> is an inline element by default.<br><br>
+Settings display behaviour to inline-block  enables us to set the height and width of the element and also accupy multiple elements in aa single row.<br><br>
+< div class="inline-me">Hey, I wish we were together.</ div><br>
+< div clas="inline-you">What's stopping you?< /div><br>
+//style.css<br>
+.innline-me, inline-you{<br>
+display:inline-block;<br>
+height:20px;<br>
+width:50%;<br>
+}<br>
+<br>
+The above snippet will make both the divs inline where each will one take 50% of the container width and the output will be similar to the one shown in the above image.<br>
+*div is a block element by default.
+<h2>Overflowing content? No problem.</h2>
+Wouldn't it be helpful, if we get informed about overflowing of a water jar while we still watch the extra minutes of a football game.<br>
+The <b>overflow</b> property in CSS is used to specify what happen if content goes beyond the context or content area.<br>
+Two options: Either trim the content or find a genie.<br>
+<h3>Trim overflowing content</h3>
+To trim overflowing content <b>hidden </b> value is passed to the overflow property. This will make the overflowing content invisible.<br>
+<br>
+< div class="trimmed"> I know I am going to get slashed from bottom but it's fine. Someone will save me. Hopes intact.</ div><br>
+//style.css<br>
+.trimmed{<br>
+height:20px;<br>
+width:400px;<br>
+overflow:hidden;<br>
+}<br><br>
+The above snippet will result in the followin output:<br>
+<u>output:</u><br>
+I know I am going to get slashed from the bottom bu it's fine.<br><br>
+The height and width of div is set to be 20px and 400px respectively, so the content overflows and since it is aassigned a value of hidden.<br>
+It gets trimmed.<br>
+<h3>Add scrollbars</h3>The code is magical in itself, no need of a genie.<br>
+To display the overflowing content we can set the display property to <b>scroll</b>.<br>
+This will add a horizontaal as well as a vertical scrollbar to the  div.<br>
+< div class="scroll">I knew you would save me. Let's  show the world what are made of.</ div><br>
+//style.css<br>
+.scroll{<br>
+heightt:50px;<br>
+width:200px;<br>
+overflow:scroll;<br>
+}<br>
+ <br>
+ Scrollbars appear around the div and the content can be seen upon scroll. You can try it by yourself.<br>
+ <h3>overflow Auto</h3>
+ Setting overflow to <b>auto</b> is an intelligent move.<br>
+ It automatically detects if the content is trimmed and adds scrollbar if necessary, aand only along the axis where it is required.<br>
+ < div class="auto-me">i knew you would save me. Let's shows the world what we are made of</ div><br>
+ .auto-me{<br>
+ height:40px;<br>
+ width:200px;<br>
+ overflow:auto;<br>
+ }<br>
+ <br>
+ The scrollbar appears since the content is getting trimmed, also only vertical  scrollbaar appears.<br>
+ <h3>Overflow visible</h3>
+ This is not something you would want.<br>
+ But setting overfflow to <b>visible</b> will make the content render even if it goes outside the container.<br>
+ SSurprisingly, thiss is the default behaviour.<br><br>
+ < div class="visiblle-me">I knew you would saave me. Let's show the world what we are made of</ div><br>
+ //style.css<br>
+ .visible-me{<br>
+ height:40px;<br>
+ width:200px;<br>
+ overflow:visible;<br>
+ border:1px solid #000;<br>
+ }<br>
+ <br>
+ The content is shown even if it goes outside the div. 
+ <h2>What are Pseudo Classes</h2>
+ <h3>Introduction</h3>
+ The way we can twist and turn on a piece of claay and change it into the shape/state we want. Similaary in HTML.<br>
+ An element caan have multiple states.<br>
+ These states can be anything like hovered, focused, visited, active depending upon the user's action.<br>
+ To change the propertties of elements in these staates we have <b>pseudo classes</b><br>
+ Pseudo classes are written in the following manner:<br><br>
+ selector:pseudo-class{<br>
+ property:value;<br>
+ }<br><br>
+ Let's explore the available pseudo classses.<br>
+ <h3>Changing element properties on hover</h3>
+ Have  you ever noticed the text being focused when you hover it?<br>
+ For the same purpose we use pseudo classs <b>hover</b> to target elements when they are hovered.<br>
+ Whatever property and value we give to hover pseudo class will apply only when the element is hovered.<br><br>
+< input class="hover-me" type="button" value="Hover" /><br>
+//style.css<br>
+.hover-me:hover{<br>
+background-color:green;<br>
+}<br><br>
+<h3>Changing properties of an active element</h3>
+to change the properties of an active link, <b>active</b> pseudo is used.<br>
+A link is in active state when clicked.<br><br>
+< a href="www.anywebsiteyoulike.com">click me</ a><<br>
+//style.css<br>
+a:active{<br>
+color:red;<br>
+}<br><br>
+<h3>Change properties of unvisited links</h3>
+To change properties of llinks which are yet unvisited, <b>link</b> pseudo class iis used.<br><<br>
+< a href="www.anywebsiteyoulike.com">Don't click me</a ><br>
+//style.css<br>
+a:link{<br>
+color:red;<br>
+}<br><br>
+<h3>Change properties of visited  llinks</h3>
+To change the properties of links which are already visited,<b>visited</b> pseudo class is used.<br>
+<br>
+< a href="www.anywwebsiteyoulike.com">Click me</ a><br>
+//style.css<br>
+a:visited{<br>
+color:black;<br>
+}<br><br>
+<h2>Writing CSS for mobiles</h2>
+We all are avid users of the mobiles and tablets.<br>
+It becomes necessary to make sure thaat the things developed are compatible and properly visible across all devices.<br>
+<b>Media queries</b> come to rescue.<br>
+Using media queries we can write styles based on screen sizes, specifically targeted to tablets, phones and desktops.<br>
+<h3>Writing media queries</h3>
+To write <b>media queries</b>, <b>@media</b> property is used.<br>
+It is written as follow:<br><br>
+@media screen and (condition) {<br>
+//Whatever CSS you want to write<br>
+}<br><br>
+Here condition consists of conditions involving height and width of screen.<br>
+And inside the media block we caan write whaatever CSS we want specifically for that screen size.<br>
+To write CSS for screen sizes wider than or equal tto 720px, we can write:<br><br>
+@media screen and (min-width:720px) {<br>
+p{<br>
+font-size:16px;<br>
+}<br>
+}<br><br>
+The above CSS will change font-size of every paragraph to 16px on devices with screen size 720px or more than 720px.<br>
+Similary,<br>
+<b>max-width</b> can be used to specify properties specifically for screen sizes equal to or less than speccified.<br>
+On the same grounds <b>max-height</b> and <b>min-height</b> can also be ussed.<br>
+<br>
+<br>
+<br>
+All the tutorials are given by <a href="https://programminghub.io">Programming Hub </a> and editted by <b><u>Hilosthone And Johnny Al-Alam</b></u> <br>
+Contact: +2349051772499 solihullahsulyman@gmail.com
+<body>
+</html>
